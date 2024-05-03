@@ -1,0 +1,27 @@
+<form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+  <!-- <input
+    type="text"
+    name="username"
+    id="username"
+    [(ngModel)]="formData.username"
+    #username="ngModel"
+  /> -->
+
+  <app-text-field
+    id="username"
+    name="username"
+    [required]="true"
+    #firstname="ngModel"
+    [(ngModel)]="formData.username"
+  ></app-text-field>
+
+  <app-text-field
+    id="name"
+    name="name"
+    [minlength]="3"
+    #name="ngModel"
+    [(ngModel)]="formData.name"
+  ></app-text-field>
+
+  <button type="submit">Submit</button>
+</form>

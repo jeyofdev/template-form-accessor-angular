@@ -1,0 +1,18 @@
+<input
+  type="text"
+  [name]="name"
+  [id]="id"
+  [ngModel]="value"
+  (ngModelChange)="onInputChange($event)"
+  (focus)="markAsTouched()"
+  [required]="required"
+  [minlength]="minlength"
+/>
+
+<!-- <input
+    type="text"
+    name="username"
+    id="username"
+    [(ngModel)]="formData.username"
+    #username="ngModel"
+  /> -->
